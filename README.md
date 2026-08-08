@@ -1,131 +1,159 @@
-HR Attrition Analytics using Microsoft Fabric & Power BI
+# HR Attrition Analytics using Microsoft Fabric & Power BI
 
+An end-to-end HR analytics solution built using Microsoft Fabric and Power BI to identify employee attrition trends and enable interactive workforce analysis.
 
-📌 Project Overview
+---
 
-Developed an end-to-end HR Analytics solution using Microsoft Fabric and Power BI to analyze employee attrition patterns. The solution automates data ingestion, transformation, modeling, reporting, security, and deployment to help HR teams identify key factors influencing employee turnover.
+## Project Overview
 
-🎯 Business Requirements
+This project demonstrates a complete Microsoft Fabric analytics workflow—from data ingestion to report deployment.
 
-The dashboard answers the following business questions:
+The solution imports HR employee data from GitHub using Dataflow Gen2, performs data transformation with Power Query, stores the data in a Lakehouse (Delta Tables), creates a Semantic Model, and builds interactive Power BI reports that are published to Microsoft Fabric.
 
-What is the overall employee attrition rate?
-Which departments experience the highest attrition?
-Does salary influence employee attrition?
-Which age groups are leaving the organization?
-Does overtime contribute to employee turnover?
-How do education, marital status, gender, and business travel affect attrition?
+---
 
+## Business Problem
 
-🏗️ Solution Architecture
+HR teams need to understand:
 
-<img width="278" height="312" alt="image" src="https://github.com/user-attachments/assets/a49cc77a-5d55-45b9-85c1-d2b03b2cc78b" />
+- Which departments have the highest attrition?
+- Which salary bands experience more employee turnover?
+- Does age, gender, education or business travel influence attrition?
+- Which job roles require immediate retention efforts?
 
+This dashboard provides interactive insights to support workforce planning and retention strategies.
 
+---
 
+## Architecture
 
-
-
-🔄 Microsoft Fabric Workflow
-
+```
 GitHub CSV
-
-↓
-
+      │
+      ▼
 Dataflow Gen2
-
-↓
-
-Power Query Transformations
-
-↓
-
+      │
+      ▼
 Lakehouse (Delta Tables)
-
-↓
-
-DirectLake Semantic Model
-
-↓
-
-Power BI Desktop Reports
-
-↓
-
-Power BI Service
-
-↓
-
-Dashboard
-
-↓
-
-Power BI App
-
-↓
-
-Scheduled Refresh + Column Level Security
-
-⚙️ Tech Stack
-Microsoft Fabric
-Dataflow Gen2
-Power Query (M)
-Lakehouse
-Delta Tables
-DirectLake Semantic Model
+      │
+      ▼
+Semantic Model (DirectLake)
+      │
+      ▼
 Power BI Desktop
+      │
+      ▼
 Power BI Service
-DAX
-Dashboard
-Power BI App
-Column Level Security (CLS)
-Scheduled Refresh
-GitHub
+      │
+      ▼
+Dashboard • App • Scheduled Refresh
+```
 
-📊 Dashboard Preview
-Overview
+---
 
-<img width="475" height="337" alt="image" src="https://github.com/user-attachments/assets/6d2c63b3-dedb-4340-a438-90ea8157f8c4" />
+## Microsoft Fabric Components Used
 
+- Dataflow Gen2
+- Power Query
+- OneLake
+- Lakehouse
+- Delta Tables
+- Semantic Model
+- DirectLake
+- Power BI Desktop
+- Power BI Service
+- Dashboard
+- Power BI App
+- Scheduled Refresh
+- Column Level Security (CLS)
 
-Deep Dive
+---
 
-<img width="476" height="338" alt="image" src="https://github.com/user-attachments/assets/124c1c2d-3146-4a39-be56-3ff22f3ce13c" />
+## Data Transformation
 
-Dashboard
+Performed in Dataflow Gen2 using Power Query.
 
-<img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/eed4a4e3-3a65-41e0-8be8-e5b0f9ddeac9" />
+- Data type corrections
+- Data cleaning
+- Salary Band custom column
+- Age Group custom column
+- Business Travel Display custom column
+- Loaded transformed data into Lakehouse
 
+---
 
-Power BI App
+## Reports
 
-<img width="959" height="379" alt="image" src="https://github.com/user-attachments/assets/dab0bc6c-25fa-4cac-9b58-4263cc731007" />
+### Overview Report
 
+Provides high-level KPIs including:
 
-📈 Key Insights
-Overall Attrition Rate: 16.1%
-Sales department recorded the highest attrition.
-Employees earning below 3K experienced the highest turnover.
-Overtime employees showed significantly higher attrition.
-Younger employees had comparatively higher attrition rates.
-🔒 Security & Governance
-Implemented Column Level Security (CLS) for sensitive Monthly Income data.
-Published reports through a Power BI App.
-Configured Scheduled Refresh.
-Used DirectLake Semantic Model for high-performance reporting.
-🛠 Skills Demonstrated
-Microsoft Fabric
-OneLake
-Dataflow Gen2
-Power Query
-Lakehouse
-Delta Tables
-DirectLake
-Semantic Modeling
-DAX
-Power BI
-Dashboard Design
-Power BI Service
-Column Level Security
-Scheduled Refresh
-GitHub
+- Attrition Rate
+- Employees Left
+- Total Headcount
+- Average Monthly Income
+- Average Tenure
+- Department Analysis
+- Salary Band Analysis
+- Job Role Analysis
+- Decomposition Tree
+
+---
+
+### Deep Dive Report
+
+Provides detailed analysis by:
+
+- Age Group
+- Gender
+- Education
+- Marital Status
+- Business Travel
+- Overtime
+
+---
+
+## Security
+
+Implemented:
+
+- Column Level Security (CLS) for Monthly Income
+
+---
+
+## Deliverables
+
+- Interactive Power BI Report
+- Microsoft Fabric Dashboard
+- Power BI App
+- Scheduled Refresh
+- End-to-End Microsoft Fabric Pipeline
+
+---
+
+## Repository Structure
+
+```
+Dataset/
+Reports/
+Screenshots/
+README.md
+```
+
+---
+
+## Skills Demonstrated
+
+- Microsoft Fabric
+- Dataflow Gen2
+- Power Query (M)
+- Lakehouse
+- OneLake
+- Delta Tables
+- Semantic Model
+- DirectLake
+- Power BI
+- DAX
+- Column Level Security (CLS)
+- Dashboard Design
+- Business Intelligence
