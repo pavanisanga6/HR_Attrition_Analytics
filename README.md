@@ -1,4 +1,6 @@
 HR Attrition Analytics using Microsoft Fabric & Power BI
+
+
 📌 Project Overview
 
 Developed an end-to-end HR Analytics solution using Microsoft Fabric and Power BI to analyze employee attrition patterns. The solution automates data ingestion, transformation, modeling, reporting, security, and deployment to help HR teams identify key factors influencing employee turnover.
