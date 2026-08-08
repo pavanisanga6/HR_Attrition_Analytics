@@ -15,10 +15,11 @@ Does overtime contribute to employee turnover?
 How do education, marital status, gender, and business travel affect attrition?
 
 🏗️ Solution Architecture
+
 <img width="278" height="312" alt="image" src="https://github.com/user-attachments/assets/a49cc77a-5d55-45b9-85c1-d2b03b2cc78b" />
 
 
-![Architecture](Architecture.png)
+
 
 
 🔄 Microsoft Fabric Workflow
